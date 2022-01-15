@@ -17,12 +17,12 @@
         register: key_out
 
 
-          - name: Save private key into file bastion-key.pem
-            copy:
-              content: "{{key_out.key.private_key}}"
-              dest: "./bastion-key.pem"
-              mode: 0600
-            when: key_out.changed
+    - name: Save private key into file bastion-key.pem
+      copy:
+        content: "{{key_out.key.private_key}}"
+        dest: "./bastion-key.pem"
+        mode: 0600
+      when: key_out.changed
 
     - name: Create Sec Grp for bastion host
       ec2_group:
