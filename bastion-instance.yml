@@ -1,5 +1,5 @@
 ---
-- name: Setup Vproject Bastion Host
+- name: Setup Vprofile Bastion Host
   hosts: localhost
   connection: local
   gather_facts: no
@@ -14,7 +14,7 @@
       ec2_key:
         name: vproject-key
         region: "{{region}}"
-        register: key_out
+      register: key_out
 
 
     - name: Save private key into file bastion-key.pem
