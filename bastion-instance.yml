@@ -31,11 +31,11 @@
         region: "{{region}}"
         vpc_id: "{{vpcid}}"
         rules:
-            - proto: tcp
-              from_port: 22
-              to_port: 22
-              cidr_ip: "{{MYIP}}"
-        register: BastionSG_out
+          - proto: tcp
+            from_port: 22
+            to_port: 22
+            cidr_ip: "{{MYIP}}"
+      register: BastionSG_out
 
     - name: Creating Bastion Host
       ec2:
