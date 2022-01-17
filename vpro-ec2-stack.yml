@@ -10,7 +10,7 @@
     - name: Import vproject setup Variable
       include_vars: vars/vprostacksetup
 
-    - name: Create vprofile ec2 key
+    - name: Create vproject ec2 key
         ec2_key:
           name: vprokey
           region: "{{region}}"
