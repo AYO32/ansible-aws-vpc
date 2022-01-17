@@ -8,7 +8,7 @@
       include_vars: vars/vpc-output_vars
 
     - name: Import vproject setup Variable
-        include_vars: vars/vprostacksetup
+      include_vars: vars/vprostacksetup
 
     - name: Create vproject ec2 key
         ec2_key:
